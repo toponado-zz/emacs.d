@@ -12,6 +12,10 @@
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
 
+(add-to-list 'auto-mode-alist '("\\.cls\\'" . java-mode))
+(add-to-list 'auto-mode-alist '("\\.trigger\\'" . java-mode))
+(load-file "~/.emacs.d/xcscope.el")
+(require 'xcscope)
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
@@ -131,7 +135,6 @@
           (lambda ()
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
-
 
 (provide 'init)
 
