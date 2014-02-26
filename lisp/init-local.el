@@ -1,7 +1,7 @@
-
 (add-to-list 'load-path "~/.emacs.d/cedet-1.1/common")
 (load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
 
+(setq initial-major-mode 'text-mode)
 (setq user-full-name "Youlong Cheng")
 (setq user-mail-address "youlongcheng@gmail.com")
 
@@ -19,6 +19,7 @@
 ;;允许emacs和外部其他程序的粘贴
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-selection-value)
+
 ;; 自动的在文件末增加一新行
 (setq require-final-newline t)
 
@@ -122,6 +123,10 @@
 (global-set-key (kbd "C-u") 'sfp-page-up)
 (global-set-key (kbd "C-j") 'move_or_scroll_half)
 
+<<<<<<< HEAD
+=======
+(global-linum-mode t)
+>>>>>>> 78e2ee83e9d77c5258a66c0c6a18ee3b3431d65e
 
 (provide 'init-local)
 
